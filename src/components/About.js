@@ -19,29 +19,27 @@ class About extends React.Component {
   render() {
     const one = (
       <p>
-        I am currently a fourth year <b>Computer Science</b> major at
-        <a href="https://www.utoronto.ca/about-u-of-t">
+        I am currently a <b>Research Impact Analyst</b> at
+        <a href="https://www.uhn.ca/">
           {" "}
-          University of Toronto
+          UHN
         </a>
-        . After graduation, I will be joining{" "}
-        <a href="https://www.aboutamazon.com/">Amazon</a> as a{" "}
-        <b>Software Development Engineer</b> while undertaking a part-time
-        <b> Master's of Science</b> in <b>Software Engineering </b>at{" "}
-        <a href="https://www.ox.ac.uk/about">University of Oxford</a>.
+        . I have a {" "} <b> Bachelors of Biomedical Engineering </b>from the {" "}
+        <a href="https://www.uoguelph.ca/">University of Guelph</a> and a {" "} <b> Masters in Biomedical Engineering </b> from the <a href="https://bme.utoronto.ca/">University of Toronto</a>
+        I look forward to working as a software development engineer. 
       </p>
     );
     const two = (
       <p>
-        Outside of work, I'm interested in following the developments of
-        science. I also play a lot of video games. And make TikToks.
+        Outside of work, I'm interested in following the developments in the
+        medical device industry. I also play a lot of video games. And make keyboards.
       </p>
     );
     const three = (
       <p>
         <b>Want to chat?</b> Shoot me a message at{" "}
-        <a href="mailto:gazi.jarin@mail.utoronto.ca">
-          gazi.jarin@mail.utoronto.ca
+        <a href="mailto:markoalhamadani@gmail.com">
+          markoalhamadani@gmail.com
         </a>{" "}
         and let's talk.
       </p>
@@ -81,7 +79,7 @@ class About extends React.Component {
               {[two]}
             </div>
             <div className="about-image">
-              <img src={"/assets/me2.jpg"} />
+              <img src={"/assets/me.PNG"} alt="me"/>
             </div>
           </div>
         </FadeInSection>

@@ -82,30 +82,32 @@ const JobList = () => {
   const [value, setValue] = React.useState(0);
 
   const experienceItems = {
-    Amazon: {
-      jobTitle: "Software Development Engineer @",
-      duration: "JUL 2022 - PRESENT",
+    UHN: {
+      jobTitle: "Research Impact Analyst @",
+      duration: "OCT 2021 - PRESENT",
       desc: [
-        "Collaborate with experienced cross-disciplinary Amazonians to conceive, design, and bring innovative products and services to market.",
-        "Design and build innovative technologies in a large distributed computing environment and help lead fundamental changes in the industry.",
-        "Build distributed storage, index, and query systems that are scalable, fault-tolerant, low cost, and easy to manage/use."
+        "Coordinated with clients on gathering, organizing, visualizing, and presenting research publication related data gathered from InCites Web of Science.",
+        "Created companywide PowerBI dashboard that related cross departmental data sources, reducing time spent to generate figures and tables in excel by 90%.",
+        "Developed PowerBI dashboard to monitor company wide KPI metrics in real time from individual data sheets."
       ]
     },
-    Wattpad: {
+    KITE: {
       jobTitle: "Software Engineering Intern @",
-      duration: "MAY 2020 - APR 2021",
+      duration: "MAY 2020 - AUG 2020",
       desc: [
-        "Developed a responsive React web page (the new Story Details) from scratch, both on client and server side, for an app with massive scale (2 billion daily requests).",
-        "Iteratively built web experiences for 80 million users across high-traffic pages.",
-        "Collaborated with senior engineers and product management following best practices for the full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations."
+        "Designed and developed a user-friendly mobile application that allows for the recording, visualization and sharing of audio signals.",
+        "Created and organized user login and signup using MySQL hosted using AWS RDS.",
+        "Developed using Android Studio and implemented source control with GitHub."
       ]
     },
-    "University of Toronto": {
-      jobTitle: "Research Engineer @",
-      duration: "MAY 2021 - SEPT 2021",
+    "Johnson & Johnson": {
+      jobTitle: "Technical Writer @",
+      duration: "MAY 2019 - SEP 2019",
       desc: [
-        "Developing and researching an NLP-based framework using state-of-the-art tools like Spacy and Stanza to facilitate the derivation of requirements from health data by leveraging syntactic dependencies, entity-recognition and rule-based match-making.",
-        " Application selected for DCS Research Award ($4,000) as part of the ”Visualizing Privacy Analysis Results” project led by Professor Marsha Chechik."
+        "Utilized root cause analysis methods to investigate suspected product defects and carry out appropriate corrective actions saving $10,000-$100,000 of pharmaceutical product.",
+        "Held and facilitated documentation/standards reviews with cross-functional team members.",
+        "Identified key quality issues regarding the production of pharmaceutical products and assigned them to corresponding departments.",
+        "Ensured all documentation (SOPs) and validation deliverables/reports met functional and design specifications and requirements."
       ]
     },
     // Centivizer: {
@@ -123,15 +125,15 @@ const JobList = () => {
     //     "Co-developed homework management software integrable with Google Classroom by utilizing the Python’s Flask micro-framework for the back-end API and Vue.js for the front-end UI, in order to translate business requirements into a functional full-stack application."
     //   ]
     // },
-    "Orange Gate": {
-      jobTitle: "Software Engineering Intern @",
-      duration: "MAY 2019 - AUG 2019",
-      desc: [
-        "Developed a Node.js smart home system through Facebook’s Messenger integrated with Bocco sen- sors and other smart devices (Nest camera, TPLink smart plugs) to derive conclusions about the current state of the home",
-        "Identified continuous improvements in data quality, design reports and coding activities, presenting results and findings to internal business stakeholders.",
-        "Relevant technologies/tools used: DialogFlow, Vision, AutoML, Messenger Bot API, MongoDB."
-      ]
-    }
+    // "Orange Gate": {
+    //   jobTitle: "Software Engineering Intern @",
+    //   duration: "MAY 2019 - AUG 2019",
+    //   desc: [
+    //     "Developed a Node.js smart home system through Facebook’s Messenger integrated with Bocco sen- sors and other smart devices (Nest camera, TPLink smart plugs) to derive conclusions about the current state of the home",
+    //     "Identified continuous improvements in data quality, design reports and coding activities, presenting results and findings to internal business stakeholders.",
+    //     "Relevant technologies/tools used: DialogFlow, Vision, AutoML, Messenger Bot API, MongoDB."
+    //   ]
+    // }
   };
 
   const handleChange = (event, newValue) => {
