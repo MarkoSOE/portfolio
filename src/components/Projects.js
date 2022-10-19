@@ -31,7 +31,8 @@ class Projects extends React.Component {
         techStack: "CSS, JS, HTML, MongoDB",
         link: "https://github.com/MarkoSOE/codingcuecards",
         open: "https://interviewprepapp.herokuapp.com/",
-        image: "../../assets/interview.jpg"
+        image: "../../public/assets/interview.jpg",
+        key: "interview.jpg"
       },
       Express: {
         title: "Express Lounge",
@@ -40,7 +41,8 @@ class Projects extends React.Component {
         techStack: "Node.js, Express.js, HTML5, CSS3, EJS",
         link: "https://github.com/MarkoSOE/cocktailAPI",
         open: "https://cocktailnodeapi.herokuapp.com/",
-        image: "../../assets/express.jpg"
+        image: "../../public/assets/express.jpg",
+        key: "interview.jpg"
       },
     };
     const projects = {
