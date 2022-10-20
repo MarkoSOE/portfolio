@@ -4,7 +4,8 @@ export default function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(false);
   const domRef = React.useRef();
   React.useEffect(() => {
-    let observerRefValue = null
+    let observerRefValue = null; // <-- variable to hold ref value
+  
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -12,8 +13,14 @@ export default function FadeInSection(props) {
         }
       });
     });
-    observer.observe(domRef.current);
-    return () => observer.unobserve(observerRefValue);
+    if (domRef.current) {
+      observer.observe(domRef.current);
+      observerRefValue = domRef.current; // <-- save ref value
+    }
+  
+    return () => {
+      if (observerRefValue) observer.unobserve(observerRefValue); // <-- use saved value
+    };
   }, []);
   return (
     <div
