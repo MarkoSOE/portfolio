@@ -35,16 +35,16 @@ class About extends React.Component {
         medical device industry. I also play a lot of video games. And make keyboards.
       </p>
     );
-    const three = (
-      <p>
-        <b>Want to chat?</b> Shoot me a message at{" "}
-        <a href="mailto:markoalhamadani@gmail.com">
-          markoalhamadani@gmail.com
-        </a>{" "}
-        and let's talk.
-      </p>
-    );
-    const desc_items = [one, two];
+    // const three = (
+    //   <p>
+    //     <b>Want to chat?</b> Shoot me a message at{" "}
+    //     <a href="mailto:markoalhamadani@gmail.com">
+    //       markoalhamadani@gmail.com
+    //     </a>{" "}
+    //     and let's talk.
+    //   </p>
+    // );
+    // const desc_items = [one, two];
 
     const tech_stack = [
       "Javascript ES6+",
@@ -55,7 +55,7 @@ class About extends React.Component {
       "HTML & CSS"
     ];
 
-    const tech_items = tech_stack.map(stack => <li>{stack}</li>);
+    // const tech_items = tech_stack.map(stack => <li>{stack}</li>);
 
     return (
       <div id="about">

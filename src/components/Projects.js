@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/Projects.css";
 import FolderOpenRoundedIcon from "@material-ui/icons/FolderOpenRounded";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import OpenInBrowserIcon from "@material-ui/icons/OpenInBrowser";
+// import GitHubIcon from "@material-ui/icons/GitHub";
+// import OpenInBrowserIcon from "@material-ui/icons/OpenInBrowser";
 import FadeInSection from "./FadeInSection";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Carousel from "react-bootstrap/Carousel";
@@ -36,7 +36,7 @@ class Projects extends React.Component {
       Express: {
         title: "Express Lounge",
         desc:
-          "This web app allows users to find recipes (ingredients, quantities, cup/vessel) for any alcoholic drink they'd like to make. Or surprise yourself with a random one.",
+          "This web app allows users to find recipes (ingredients, quantities, cup/vessel) for any alcoholic drink they'd like to make.",
         techStack: "Node.js, Express.js, HTML5, CSS3, EJS",
         link: "https://github.com/MarkoSOE/cocktailAPI",
         open: "https://cocktailnodeapi.herokuapp.com/",

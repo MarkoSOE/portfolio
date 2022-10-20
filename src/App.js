@@ -7,7 +7,7 @@ import Projects from "./components/Projects";
 import Credits from "./components/Credits";
 import "./App.css";
 import "./styles/Global.css";
-import "rsuite/dist/styles/rsuite-default.css";
+import 'rsuite/dist/rsuite.min.css';
 
 function App() {
   return (

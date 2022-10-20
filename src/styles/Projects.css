@@ -102,6 +102,7 @@
 .carousel-caption {
   font-family: "NTR", sans-serif;
   max-width: 500px;
+  padding-bottom: 10% !important;
   right: unset !important;
   left: 25% !important;
   user-select: none;

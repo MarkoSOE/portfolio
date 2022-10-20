@@ -1,9 +1,7 @@
 import React from "react";
-
 import "../styles/Intro.css";
 import Typist from "react-typist";
 import "react-typist/dist/Typist.css";
-import GaziModel from "./GaziModel";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
 import FadeInSection from "./FadeInSection";
 
@@ -44,7 +42,7 @@ class Intro extends React.Component {
             className="intro-contact"
           >
             <EmailRoundedIcon></EmailRoundedIcon>
-            {"  " + "Say hi!"}
+            {"Say hi!"}
           </a>
         </FadeInSection>
       </div>
