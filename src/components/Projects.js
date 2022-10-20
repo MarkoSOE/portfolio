@@ -63,13 +63,13 @@ class Projects extends React.Component {
         techStack: "React.JS, HTML / CSS",
         link: "https://github.com/MarkoSOE/addressbook",
       },
-      // "Odin Bot": {
-      //   desc:
-      //     "A Telegram bot that helps you excel on your daily tasks through Node NLP.",
-      //   techStack: "Javascript, Node.js, Natural NLP, Telegram API",
-      //   link: "https://github.com/gazijarin/OdinBot",
-      //   open: ""
-      // },
+      "Terminal3": {
+        desc:
+          "Online single webpage for a small local coffee shop.",
+        techStack: "HTML, CSS, JS",
+        link: "https://github.com/MarkoSOE/terminal3",
+        open: "https://terminal3.netlify.app/"
+      },
       // "Game Centre": {
       //   desc:
       //     "An Android app consisting of three board games, including multiplayer, autosave, user authentication, etc.",
