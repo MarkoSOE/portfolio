@@ -93,17 +93,19 @@
   transform: scale(1.01);
 }
 
-.carousel img {
-  object-fit: contain;
-  height: 100%;
+.carousel-item img {
+  object-fit: cover !important;
+  height: 100% !important;
+  width: 100% !important;
   opacity: 0.5;
 }
 
 .carousel-caption {
   font-family: "NTR", sans-serif;
   max-width: 500px;
+  padding-top: 10% !important;
   padding-bottom: 10% !important;
-  right: unset !important;
+  right: 25% !important;
   left: 25% !important;
   user-select: none;
 }
