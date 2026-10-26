@@ -1,69 +1,203 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Suspense } from "react";
+import Contributions from "./components/Contributions";
+import Mascot from "./components/Mascot";
+import ThemeToggle from "./components/ThemeToggle";
+import {
+  intro,
+  navLinks,
+  profile,
+  projects,
+  resumeHref,
+  socials,
+  work,
+} from "./data";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <header className="site-header">
+        <Mascot />
+        <div className="header-content">
+          <Link className="header-name" href="/">
+            {profile.name}
+          </Link>
+          <nav className="header-links" aria-label="Site">
+            {navLinks.map((link, i) => (
+              <a
+                key={link.href}
+                href={link.href}
+                aria-current={i === 0 ? "page" : undefined}
+              >
+                {link.label}
+              </a>
+            ))}
+            <ThemeToggle />
+          </nav>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      <main id="main-content" className="home">
+        <h1 className="sr-only">{profile.name}</h1>
+
+        <div className="intro">
+          <ul className="build-list">
+            {intro.map((item, i) => (
+              <li key={i}>
+                <span className="build-arrow" aria-hidden="true">
+                  →
+                </span>
+                <span>
+                  {item.text}{" "}
+                  {item.entity && (
+                    <a className="build-entity" href={item.entity.href}>
+                      {item.entity.label}
+                      {item.entity.logo && (
+                        <Image
+                          src={item.entity.logo}
+                          alt=""
+                          width={20}
+                          height={20}
+                        />
+                      )}
+                    </a>
+                  )}
+                  {item.after && ` ${item.after}`}
+                  {item.keywords?.map((k) => (
+                    <span key={k} className="build-keyword">
+                      {" "}
+                      {k}
+                    </span>
+                  ))}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <nav className="social-links" aria-label="Social links">
+            {socials.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {s.label}
+              </a>
+            ))}
+          </nav>
         </div>
+
+        <section id="work" className="section" aria-labelledby="work-title">
+          <div className="section-heading">
+            <h2 id="work-title">work</h2>
+            <a
+              href={
+                "https://crimson-actual-kingfisher-355.mypinata.cloud/ipfs/bafkreigd22m6ujoaettsko4cibxypzydogwget7bp27pmehcj3mvghmnnu"
+              }
+            >
+              résumé
+            </a>
+          </div>
+          <ul className="work-list">
+            {work.map((w) => (
+              <li key={w.org} className="work-entry">
+                <a className="work-logo" href={w.href} aria-label={w.org}>
+                  {w.logo ? (
+                    <Image src={w.logo} alt="" width={56} height={56} />
+                  ) : (
+                    <span aria-hidden="true">{w.org[0]}</span>
+                  )}
+                </a>
+                <div className="work-content">
+                  <div className="work-heading">
+                    <h3>
+                      <a href={w.href}>{w.org}</a>
+                    </h3>
+                    {w.current && <span className="work-current">current</span>}
+                  </div>
+                  <ul className="work-positions">
+                    {w.positions.map((p) => (
+                      <li key={p.title + p.dates}>
+                        <span>
+                          <span className="work-title">{p.title}</span>
+                          <span className="work-place"> · {p.place}</span>
+                        </span>
+                        <span className="work-dates">{p.dates}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section
+          id="projects"
+          className="section project-gallery"
+          aria-labelledby="projects-title"
+        >
+          <h2 id="projects-title">projects</h2>
+          <div className="project-grid">
+            {projects.map((p) => (
+              <article key={p.name} className="project">
+                <a
+                  className="project-image"
+                  href={p.links[0]?.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Explore ${p.name}`}
+                >
+                  {p.image ? (
+                    <Image
+                      src={p.image}
+                      alt={`${p.name} interface`}
+                      width={960}
+                      height={540}
+                    />
+                  ) : (
+                    <span className="project-image-placeholder">{p.name}</span>
+                  )}
+                </a>
+                <div className="project-heading">
+                  <h3>{p.name}</h3>
+                  <span>{p.year}</span>
+                </div>
+                <p className="project-description">{p.description}</p>
+                {p.stat && <p className="project-stat">{p.stat}</p>}
+                <nav className="project-links" aria-label={`${p.name} links`}>
+                  {p.links.map((l) => (
+                    <a
+                      key={l.label}
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {l.label}
+                    </a>
+                  ))}
+                </nav>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section
+          className="contributions-bottom"
+          aria-label="GitHub contributions"
+        >
+          <Suspense
+            fallback={
+              <p className="contributions-loading">loading contributions…</p>
+            }
+          >
+            <Contributions username={profile.githubUsername} />
+          </Suspense>
+        </section>
       </main>
-    </div>
+
+      <footer className="site-footer">© {profile.name} 2026</footer>
+    </>
   );
 }
