@@ -64,6 +64,18 @@ export const work: Work[] = [
       { title: "Data Analyst", place: "Toronto", dates: "Jun 2024 – Present" },
     ],
   },
+  {
+    org: "University Health Network",
+    href: "https://UHN.ca",
+    current: true,
+    positions: [
+      {
+        title: "Research Analyst",
+        place: "Toronto",
+        dates: "Oct 2021 – Apr 2024",
+      },
+    ],
+  },
 ];
 
 export type Project = {
