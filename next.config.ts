@@ -6,8 +6,7 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
   },
-  cacheComponents: true,
-  partialPrefetching: true,
+  // Cache Components hangs requests on Cloudflare Workers (OpenNext), so it stays off.
 };
 
 export default nextConfig;
