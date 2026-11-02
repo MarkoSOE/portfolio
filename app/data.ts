@@ -63,6 +63,7 @@ export const work: Work[] = [
     positions: [
       { title: "Data Analyst", place: "Toronto", dates: "Jun 2024 – Present" },
     ],
+    logo: "/logos/camh.jpg",
   },
   {
     org: "University Health Network",
@@ -75,6 +76,7 @@ export const work: Work[] = [
         dates: "Oct 2021 – Apr 2024",
       },
     ],
+    logo: "/logos/UHN.jpg",
   },
 ];
 
@@ -94,6 +96,7 @@ export const projects: Project[] = [
     year: "2026",
     description: "FastAPI + React full stack url shortener",
     stat: "1k URLs shortened",
+    image: "/projects/urlsnip.png",
     links: [
       { label: "live site ↗", href: "https://URLsnip.ca" },
       {

@@ -155,6 +155,7 @@ export default function Home() {
                       alt={`${p.name} interface`}
                       width={960}
                       height={540}
+                      loading="eager"
                     />
                   ) : (
                     <span className="project-image-placeholder">{p.name}</span>
